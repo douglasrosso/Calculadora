@@ -1,4 +1,4 @@
-package Factories;
+package factories;
 
 import javax.swing.JLabel;
 import javax.swing.JPanel;
