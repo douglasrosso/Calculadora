@@ -1,7 +1,7 @@
 package components;
 
-import factories.ButtonBuilder;
-import factories.LabelTextFieldBuilder;
+import Factories.ButtonBuilder;
+import Factories.LabelTextFieldBuilder;
 import java.awt.event.ActionEvent;
 import javax.swing.AbstractAction;
 import javax.swing.BorderFactory;
