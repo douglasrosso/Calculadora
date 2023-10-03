@@ -1,4 +1,4 @@
-package factories;
+package Factories;
 
 import javax.swing.JTextField;
 import javax.swing.text.AbstractDocument;

@@ -1,4 +1,4 @@
-package factories;
+package Factories;
 
 import java.awt.Color;
 import javax.swing.JLabel;

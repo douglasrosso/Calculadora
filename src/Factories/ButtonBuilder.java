@@ -1,4 +1,4 @@
-package factories;
+package Factories;
 
 import javax.swing.AbstractAction;
 import javax.swing.JButton;
