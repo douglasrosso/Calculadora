@@ -44,7 +44,7 @@ public class Incrementar extends JPanel {
     AbstractAction action = new AbstractAction("Calcular") {
       @Override
       public void actionPerformed(ActionEvent e) {
-        float resultado = Calculos.aplicacaoAcrescimo(
+        float resultado = Calculos.aplicaAcrescimo(
           Float.parseFloat(
             labelTextFieldBuilder.GetTextField().getText().toString()
           ),

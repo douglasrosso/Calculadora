@@ -16,7 +16,7 @@ public class Diferenca extends JPanel {
     _painel = new JPanel();
     _painel.setBorder(
       BorderFactory.createTitledBorder(
-        "Variação Delta (%) - diferença % entre valores"
+        "Variação variacaoDelta (%) - diferença % entre valores"
       )
     );
     _painel.setLayout(null);
@@ -46,7 +46,7 @@ public class Diferenca extends JPanel {
     AbstractAction action = new AbstractAction("Calcular") {
       @Override
       public void actionPerformed(ActionEvent e) {
-        float resultado = Calculos.delta(
+        float resultado = Calculos.variacaoDelta(
           Float.parseFloat(
             labelTextFieldBuilder.GetTextField().getText().toString()
           ),

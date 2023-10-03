@@ -44,7 +44,7 @@ public class Desconto1 extends JPanel {
     AbstractAction action = new AbstractAction("Calcular") {
       @Override
       public void actionPerformed(ActionEvent e) {
-        float resultado = Calculos.aplicacaoDesconto(
+        float resultado = Calculos.aplicaDesconto(
           Float.parseFloat(
             labelTextFieldBuilder.GetTextField().getText().toString()
           ),
