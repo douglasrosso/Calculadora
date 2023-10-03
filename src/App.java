@@ -1,8 +1,6 @@
 import components.Pagina;
 import components.RegraD3;
-
 import javax.swing.JPanel;
-
 import components.Amostragem1;
 import components.Amostragem2;
 import components.Desconto1;
