@@ -46,7 +46,7 @@ public class Diferenca extends JPanel {
     AbstractAction action = new AbstractAction("Calcular") {
       @Override
       public void actionPerformed(ActionEvent e) {
-        float resultado = Calculos.variacaoDelta(
+        float resultado = Calculos.DiferencaCalc(
           Float.parseFloat(
             labelTextFieldBuilder.GetTextField().getText().toString()
           ),

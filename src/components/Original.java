@@ -44,7 +44,7 @@ public class Original extends JPanel {
     AbstractAction action = new AbstractAction("Calcular") {
       @Override
       public void actionPerformed(ActionEvent e) {
-        float resultado = Calculos.original(
+        float resultado = Calculos.OriginalCalc(
           Float.parseFloat(
             labelTextFieldBuilder.GetTextField().getText().toString()
           ),

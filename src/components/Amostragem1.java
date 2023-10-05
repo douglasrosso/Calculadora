@@ -44,7 +44,7 @@ public class Amostragem1 extends JPanel {
     AbstractAction action = new AbstractAction("Calcular") {
       @Override
       public void actionPerformed(ActionEvent e) {
-        float resultado = Calculos.xRepresentaY(
+        float resultado = Calculos.Amostragem1Calc(
           Float.parseFloat(
             labelTextFieldBuilder.GetTextField().getText().toString()
           ),

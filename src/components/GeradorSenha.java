@@ -120,7 +120,7 @@ public class GeradorSenha extends JPanel {
     AbstractAction action = new AbstractAction("Calcular") {
       @Override
       public void actionPerformed(ActionEvent e) {
-        float resultado = Calculos.descontoPago(
+        float resultado = Calculos.Desconto2Calc(
           Float.parseFloat(
             labelTextFieldBuilder.GetTextField().getText().toString()
           ),

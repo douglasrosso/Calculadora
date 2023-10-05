@@ -1,45 +1,49 @@
 package utils;
 
 public class Calculos {
-  public static float xRepresentaY(float primeiroNumero, float segundoNumero) {
-    return (primeiroNumero * segundoNumero) / 100;
-  }
 
-  public static float yRepresentaX(float primeiroNumero, float segundoNumero) {
-    return (primeiroNumero * 100) / segundoNumero;
-  }
-
-  public static float aplicaDesconto(
+  public static float Amostragem1Calc(
     float primeiroNumero,
     float segundoNumero
   ) {
+    return (primeiroNumero * segundoNumero) / 100;
+  }
+
+  public static float Amostragem2Calc(
+    float primeiroNumero,
+    float segundoNumero
+  ) {
+    return (primeiroNumero * 100) / segundoNumero;
+  }
+
+  public static float Desconto1Calc(float primeiroNumero, float segundoNumero) {
     return primeiroNumero - (primeiroNumero * (segundoNumero / 100));
   }
 
-  public static float original(float primeiroNumero, float segundoNumero) {
+  public static float OriginalCalc(float primeiroNumero, float segundoNumero) {
     return (primeiroNumero * 100 / (100 - segundoNumero));
   }
 
-  public static float aplicaAcrescimo(
+  public static float IncrementarCalc(
     float primeiroNumero,
     float segundoNumero
   ) {
     return primeiroNumero + (primeiroNumero * (segundoNumero / 100));
   }
 
-  public static float variacaoDelta(float primeiroNumero, float segundoNumero) {
+  public static float DiferencaCalc(float primeiroNumero, float segundoNumero) {
     return ((primeiroNumero - segundoNumero) / segundoNumero) * 100;
   }
 
-  public static float regraD3(
+  public static float RegraD3Calc(
     float primeiroNumero,
     float segundoNumero,
-    float c
+    float terceiroNumero
   ) {
-    return ((c * segundoNumero) / primeiroNumero);
+    return ((terceiroNumero * segundoNumero) / primeiroNumero);
   }
 
-  public static float descontoPago(float primeiroNumero, float segundoNumero) {
+  public static float Desconto2Calc(float primeiroNumero, float segundoNumero) {
     return ((primeiroNumero - segundoNumero) / primeiroNumero) * 100;
   }
 }

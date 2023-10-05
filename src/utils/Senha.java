@@ -24,26 +24,26 @@ public final class Senha {
     StringBuilder senha = new StringBuilder(tamanho);
     Random indiceAleatorio = new Random(System.nanoTime());
 
-    List<String> listaCaracter = new ArrayList<String>(4);
+    List<String> listaCaracteres = new ArrayList<String>(4);
     if (simbolos) {
-      listaCaracter.add(caracteres);
+      listaCaracteres.add(caracteres);
     }
     if (minusculos) {
-      listaCaracter.add(lowercase);
+      listaCaracteres.add(lowercase);
     }
     if (numeros) {
-      listaCaracter.add(numericos);
+      listaCaracteres.add(numericos);
     }
     if (maiusculos) {
-      listaCaracter.add(uppercase);
+      listaCaracteres.add(uppercase);
     }
 
     for (int i = 0; i < tamanho; i++) {
-      String charCategory = listaCaracter.get(
-        indiceAleatorio.nextInt(listaCaracter.size())
+      String categoriaDeChar = listaCaracteres.get(
+        indiceAleatorio.nextInt(listaCaracteres.size())
       );
-      int posicao = indiceAleatorio.nextInt(charCategory.length());
-      senha.append(charCategory.charAt(posicao));
+      int posicao = indiceAleatorio.nextInt(categoriaDeChar.length());
+      senha.append(categoriaDeChar.charAt(posicao));
     }
     return new String(senha);
   }

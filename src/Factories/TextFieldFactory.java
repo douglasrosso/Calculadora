@@ -8,20 +8,20 @@ import javax.swing.text.DocumentFilter;
 
 public class TextFieldFactory extends JTextField {
 
-  private JTextField campoTexto;
+  private JTextField _textField;
 
   public TextFieldFactory(int x, int y, int largura, int altura) {
-    campoTexto = new JTextField();
-    campoTexto.setBackground(new java.awt.Color(245, 164, 164));
-    campoTexto.setBounds(x, y, largura, altura);
+    _textField = new JTextField();
+    _textField.setBackground(new java.awt.Color(245, 164, 164));
+    _textField.setBounds(x, y, largura, altura);
 
-    ((AbstractDocument) campoTexto.getDocument()).setDocumentFilter(
+    ((AbstractDocument) _textField.getDocument()).setDocumentFilter(
         new FiltroNumerico()
       );
   }
 
   public JTextField GetComponent() {
-    return this.campoTexto;
+    return this._textField;
   }
 
   private static class FiltroNumerico extends DocumentFilter {
@@ -48,7 +48,7 @@ public class TextFieldFactory extends JTextField {
     public void replace(
       DocumentFilter.FilterBypass fb,
       int offset,
-      int length,
+      int tamanho,
       String texto,
       AttributeSet atributos
     ) throws BadLocationException {
@@ -62,7 +62,7 @@ public class TextFieldFactory extends JTextField {
         }
         texto = construtor.toString();
       }
-      super.replace(fb, offset, length, texto, atributos);
+      super.replace(fb, offset, tamanho, texto, atributos);
     }
   }
 }

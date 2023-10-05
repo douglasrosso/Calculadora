@@ -9,8 +9,8 @@ public class LabelTextFieldBuilder {
   private JLabel _label;
   private JTextField _textfield;
 
-  public LabelTextFieldBuilder(String label, int x, int y) {
-    LabelFactory labelComponent = new LabelFactory(label, x, y, 120, 25);
+  public LabelTextFieldBuilder(String titulo, int x, int y) {
+    LabelFactory labelComponent = new LabelFactory(titulo, x, y, 120, 25);
     _label = labelComponent.GetComponent();
 
     TextFieldFactory textfield = new TextFieldFactory(x + 120, y, 100, 25);
