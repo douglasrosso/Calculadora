@@ -21,8 +21,6 @@ public class App {
     JPanel painelAmostragem2 = new Amostragem2().getPainel();
     JPanel painelDiferenca = new Diferenca().getPainel();
     JPanel painelOriginal = new Original().getPainel();
-
-    // Deixar para depois
     JPanel painelRegraD3 = new RegraD3().getPainel();
     JPanel painelGeradorSenha = new GeradorSenha().getPainel();
 
