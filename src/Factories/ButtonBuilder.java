@@ -13,17 +13,6 @@ public class ButtonBuilder extends JButton {
   private JButton _button;
 
   public ButtonBuilder(String titulo, int x, int y, AbstractAction acao) {
-    try {
-        for (LookAndFeelInfo info : UIManager.getInstalledLookAndFeels()) {
-        if ("Nimbus".equals(info.getName())) {
-          UIManager.setLookAndFeel(info.getClassName());
-          break;
-        }
-      }
-    } catch (Exception e) {
-      e.printStackTrace();
-    }
-
     _button = new JButton(acao);
     _button.setText(titulo); 
     _button.setForeground(Color.white);

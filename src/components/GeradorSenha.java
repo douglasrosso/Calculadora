@@ -1,145 +1,104 @@
 package components;
 
-import Factories.ButtonBuilder;
-import Factories.LabelTextFieldBuilder;
 import java.awt.event.ActionEvent;
 import javax.swing.AbstractAction;
 import javax.swing.BorderFactory;
+import javax.swing.JButton;
+import javax.swing.JCheckBox;
 import javax.swing.JPanel;
-import utils.Calculos;
+import javax.swing.JLabel;
+import javax.swing.JTextField;
+import utils.Senha;
 
 public class GeradorSenha extends JPanel {
 
   private JPanel _painel;
+  private JCheckBox _geradorMaiusculo;
+  private JCheckBox _geradorMinusculo;
+  private JCheckBox _geradorNumero;
+  private JCheckBox _geradorSimbolo;
+  private JLabel _tamanhoGerador;
+  private JTextField _txfGerador;
+  private JTextField _txfResultadoGerador;
+  private JButton _btnCalcular;
+  private boolean _maiusculas;
+  private boolean _minusculas;
+  private boolean _numeros;
+  private boolean _simbolos;
 
   public GeradorSenha() {
-    // painelGeradorDeSenha = new JPanel();
-    // painelGeradorDeSenha.setLayout(null);
-    // painelGeradorDeSenha.setBorder(BorderFactory.createTitledBorder("Gerador de
-    // senhas"));
-    // painelGeradorDeSenha.setBounds(700, 330, 350, 200);
-
-    // gerador1 = new JCheckBox("Maiúsculas");
-    // gerador1.setBounds(10, 20, 90, 25);
-    // painelGeradorDeSenha.add(gerador1);
-
-    // gerador2 = new JCheckBox("Minúculas");
-    // gerador2.setBounds(120, 20, 90, 25);
-    // painelGeradorDeSenha.add(gerador2);
-
-    // gerador3 = new JCheckBox("Números");
-    // gerador3.setBounds(10, 45, 90, 25);
-    // painelGeradorDeSenha.add(gerador3);
-
-    // gerador4 = new JCheckBox("Símbolos");
-    // gerador4.setBounds(120, 45, 90, 25);
-    // painelGeradorDeSenha.add(gerador4);
-
-    // gerador5 = new JLabel("Tamanho");
-    // gerador5.setBounds(15, 70, 200, 25);
-    // painelGeradorDeSenha.add(gerador5);
-
-    // txfGerador = new JTextField();
-    // txfGerador.setBounds(20, 100, 260, 25);
-    // painelGeradorDeSenha.add(txfGerador);
-
-    // txfResultadoGerador = new JTextField();
-    // txfResultadoGerador.setBackground(new java.awt.Color(134, 235, 154));
-    // txfResultadoGerador.setBounds(20, 170, 260, 25);
-    // painelGeradorDeSenha.add(txfResultadoGerador);
-
-    // btnCalcular = new JButton(new AbstractAction("Gerar") {
-
-    // @Override
-    // public void actionPerformed(ActionEvent e) {
-    // if (gerador1.isSelected()) {
-    // maiusculas = true;
-    // } else {
-    // maiusculas = false;
-    // }
-    // if (gerador2.isSelected()) {
-    // minusculas = true;
-    // } else {
-    // minusculas = false;
-    // }
-    // if (gerador3.isSelected()) {
-    // numeros = true;
-    // } else {
-    // numeros = false;
-    // }
-    // if (gerador4.isSelected()) {
-    // simbolos = true;
-    // } else {
-    // simbolos = false;
-    // }
-
-    // senha senha = new senha();
-
-    // String resultado = senha.generate(Integer.parseInt(txfGerador.getText()),
-    // minusculas, maiusculas, numeros,
-    // simbolos);
-    // txfResultadoGerador.setText("" + resultado);
-
-    // }
-    // });
-    // btnCalcular.setBounds(100, 125, 90, 25);
-    // painelGeradorDeSenha.add(btnCalcular);
-
-    // getContentPane().add(painelGeradorDeSenha);
-
     _painel = new JPanel();
     _painel.setBorder(
-      BorderFactory.createTitledBorder(
-        "Valor era A e paguei B, qual foi o desconto%?"
-      )
-    );
+        BorderFactory.createTitledBorder(
+            "Gerador de senha"));
     _painel.setLayout(null);
-    _painel.setBounds(5, 155, 350, 150);
+    _painel.setBounds(305, 305, 297, 210);
 
-    LabelTextFieldBuilder labelTextFieldBuilder = new LabelTextFieldBuilder(
-      "Valor original (a)",
-      25,
-      20
-    );
-    labelTextFieldBuilder.Build(_painel);
+    _geradorMaiusculo = new JCheckBox("Maiúsculas");
+    _geradorMaiusculo.setBounds(10, 20, 90, 25);
+    _painel.add(_geradorMaiusculo);
 
-    LabelTextFieldBuilder labelTextField2Builder = new LabelTextFieldBuilder(
-      "Valor c/ desconto (b)",
-      25,
-      50
-    );
-    labelTextField2Builder.Build(_painel);
+    _geradorMinusculo = new JCheckBox("Minúculas");
+    _geradorMinusculo.setBounds(120, 20, 90, 25);
+    _painel.add(_geradorMinusculo);
 
-    LabelTextFieldBuilder labelTextField3Builder = new LabelTextFieldBuilder(
-      "% desconto",
-      25,
-      80
-    );
-    labelTextField3Builder.Build(_painel);
+    _geradorNumero = new JCheckBox("Números");
+    _geradorNumero.setBounds(10, 45, 90, 25);
+    _painel.add(_geradorNumero);
 
-    AbstractAction action = new AbstractAction("Calcular") {
+    _geradorSimbolo = new JCheckBox("Símbolos");
+    _geradorSimbolo.setBounds(120, 45, 90, 25);
+    _painel.add(_geradorSimbolo);
+
+    _tamanhoGerador = new JLabel("Tamanho");
+    _tamanhoGerador.setBounds(15, 70, 200, 25);
+    _painel.add(_tamanhoGerador);
+
+    _txfGerador = new JTextField();
+    _txfGerador.setBounds(20, 100, 260, 25);
+    _painel.add(_txfGerador);
+
+    _txfResultadoGerador = new JTextField();
+    _txfResultadoGerador.setBackground(new java.awt.Color(134, 235, 154));
+    _txfResultadoGerador.setBounds(20, 170, 260, 25);
+    _painel.add(_txfResultadoGerador);
+
+    _btnCalcular = new JButton(new AbstractAction("Gerar") {
+
       @Override
       public void actionPerformed(ActionEvent e) {
-        float resultado = Calculos.Desconto2Calc(
-          Float.parseFloat(
-            labelTextFieldBuilder.GetTextField().getText().toString()
-          ),
-          Float.parseFloat(
-            labelTextField2Builder.GetTextField().getText().toString()
-          )
-        );
-        labelTextField3Builder.GetTextField().setText("" + resultado);
+        if (_geradorMaiusculo.isSelected()) {
+          _maiusculas = true;
+        } else {
+          _maiusculas = false;
+        }
+        if (_geradorMinusculo.isSelected()) {
+          _minusculas = true;
+        } else {
+          _minusculas = false;
+        }
+        if (_geradorNumero.isSelected()) {
+          _numeros = true;
+        } else {
+          _numeros = false;
+        }
+        if (_geradorSimbolo.isSelected()) {
+          _simbolos = true;
+        } else {
+          _simbolos = false;
+        }
+
+        Senha senha = new Senha();
+
+        String resultado = senha.Gerar(Integer.parseInt(_txfGerador.getText()),
+            _minusculas, _maiusculas, _numeros,
+            _simbolos);
+        _txfResultadoGerador.setText("" + resultado);
+
       }
-    };
-
-    ButtonBuilder buttonBuilder = new ButtonBuilder(
-      "Calcular",
-      145,
-      115,
-      action
-    );
-
-    buttonBuilder.Build(_painel);
+    });
+    _btnCalcular.setBounds(100, 125, 90, 25);
+    _painel.add(_btnCalcular);
   }
 
   public JPanel getPainel() {

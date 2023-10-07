@@ -1,7 +1,5 @@
 package Factories;
 
-import java.awt.Color;
-
 import javax.swing.JTextField;
 import javax.swing.text.AbstractDocument;
 import javax.swing.text.AttributeSet;

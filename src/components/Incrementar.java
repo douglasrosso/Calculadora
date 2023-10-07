@@ -19,6 +19,7 @@ public class Incrementar extends JPanel {
     );
     _painel.setLayout(null);
     _painel.setBounds(305, 5, 350, 150);
+    
 
     LabelTextFieldBuilder labelTextFieldBuilder = new LabelTextFieldBuilder(
       "Valor inicial R$ %",

@@ -33,8 +33,8 @@ public class App {
     pagina.AddComponente(painelAmostragem2);
     pagina.AddComponente(painelDiferenca);
     pagina.AddComponente(painelOriginal);
-    //pagina.AddComponente(painelGeradorSenha);
-    //pagina.AddComponente(painelRegraD3);
+    pagina.AddComponente(painelGeradorSenha);
+    pagina.AddComponente(painelRegraD3);
 
     pagina.Mostrar();
   }
