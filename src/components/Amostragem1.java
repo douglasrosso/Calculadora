@@ -18,7 +18,7 @@ public class Amostragem1 extends JPanel {
       BorderFactory.createTitledBorder("Amostragem - Quanto X% representa de Y")
     );
     _painel.setLayout(null);
-    _painel.setBounds(605, 5, 300, 150);
+    _painel.setBounds(655, 5, 300, 150);
 
     LabelTextFieldBuilder labelTextFieldBuilder = new LabelTextFieldBuilder(
       "Total (a)",

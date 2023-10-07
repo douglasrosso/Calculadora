@@ -17,7 +17,7 @@ public class RegraD3 extends JPanel {
     // painelregraD3.setLayout(null);
     // painelregraD3.setBorder(BorderFactory.createTitledBorder("Regra de
     // Três"));
-    // painelregraD3.setBounds(400, 330, 300, 150);
+    // painelregraD3.setBounds(350, 330, 300, 150);
 
     // regra1 = new JLabel("a:");
     // regra1.setForeground(Color.red);

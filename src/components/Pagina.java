@@ -8,7 +8,7 @@ public class Pagina extends JFrame {
   public Pagina() {
     setTitle("Calculadora");
     setResizable(false);
-    setSize(1280, 720);
+    setSize(1274, 720);
     setLayout(null);
     setLocationRelativeTo(null);
     setDefaultCloseOperation(EXIT_ON_CLOSE);

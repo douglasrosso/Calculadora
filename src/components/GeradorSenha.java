@@ -17,7 +17,7 @@ public class GeradorSenha extends JPanel {
     // painelGeradorDeSenha.setLayout(null);
     // painelGeradorDeSenha.setBorder(BorderFactory.createTitledBorder("Gerador de
     // senhas"));
-    // painelGeradorDeSenha.setBounds(700, 330, 300, 200);
+    // painelGeradorDeSenha.setBounds(700, 330, 350, 200);
 
     // gerador1 = new JCheckBox("Maiúsculas");
     // gerador1.setBounds(10, 20, 90, 25);
@@ -94,7 +94,7 @@ public class GeradorSenha extends JPanel {
       )
     );
     _painel.setLayout(null);
-    _painel.setBounds(5, 155, 300, 150);
+    _painel.setBounds(5, 155, 350, 150);
 
     LabelTextFieldBuilder labelTextFieldBuilder = new LabelTextFieldBuilder(
       "Valor original (a)",

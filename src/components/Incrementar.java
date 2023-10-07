@@ -18,7 +18,7 @@ public class Incrementar extends JPanel {
       BorderFactory.createTitledBorder("Incrementar % a um valor")
     );
     _painel.setLayout(null);
-    _painel.setBounds(305, 5, 300, 150);
+    _painel.setBounds(305, 5, 350, 150);
 
     LabelTextFieldBuilder labelTextFieldBuilder = new LabelTextFieldBuilder(
       "Valor inicial R$ %",

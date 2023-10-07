@@ -18,7 +18,7 @@ public class Original extends JPanel {
       BorderFactory.createTitledBorder("Qual era o valor original?")
     );
     _painel.setLayout(null);
-    _painel.setBounds(605, 155, 300, 150);
+    _painel.setBounds(655, 155, 300, 150);
 
     LabelTextFieldBuilder labelTextFieldBuilder = new LabelTextFieldBuilder(
       "Valor final R$ (a)",

@@ -20,7 +20,7 @@ public class Diferenca extends JPanel {
       )
     );
     _painel.setLayout(null);
-    _painel.setBounds(305, 155, 300, 150);
+    _painel.setBounds(305, 155, 350, 150);
 
     LabelTextFieldBuilder labelTextFieldBuilder = new LabelTextFieldBuilder(
       "Valor inicial (a)",

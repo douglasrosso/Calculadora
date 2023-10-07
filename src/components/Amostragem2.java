@@ -20,7 +20,7 @@ public class Amostragem2 extends JPanel {
       )
     );
     _painel.setLayout(null);
-    _painel.setBounds(905, 5, 300, 150);
+    _painel.setBounds(955, 5, 300, 150);
 
     LabelTextFieldBuilder labelTextFieldBuilder = new LabelTextFieldBuilder(
       "Total (a)",
