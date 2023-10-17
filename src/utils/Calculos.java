@@ -13,7 +13,7 @@ public class Calculos {
     float primeiroNumero,
     float segundoNumero
   ) {
-    return (primeiroNumero * 100) / segundoNumero;
+    return (segundoNumero * 100) / primeiroNumero;
   }
 
   public static float Desconto1Calc(float primeiroNumero, float segundoNumero) {
@@ -32,7 +32,7 @@ public class Calculos {
   }
 
   public static float DiferencaCalc(float primeiroNumero, float segundoNumero) {
-    return ((primeiroNumero - segundoNumero) / segundoNumero) * 100;
+    return ((segundoNumero - primeiroNumero) / primeiroNumero) * 100;
   }
 
   public static float RegraD3Calc(

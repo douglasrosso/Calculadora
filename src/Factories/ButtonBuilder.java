@@ -5,8 +5,6 @@ import java.awt.Cursor;
 import javax.swing.AbstractAction;
 import javax.swing.JButton;
 import javax.swing.JPanel;
-import javax.swing.UIManager;
-import javax.swing.UIManager.LookAndFeelInfo;
 
 public class ButtonBuilder extends JButton {
 
